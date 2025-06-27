@@ -1,0 +1,159 @@
+body {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+.opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.08);
+    padding: 2rem 2.5rem;
+    text-align: center;
+    width: 270px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(37,99,235,0.15);
+}
+.card h2 {
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+.card p {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+.card a, .card button {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.card a:hover, .card button:hover {
+    background: #1e40af;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(37,99,235,0.08);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+}
+
+th {
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+    background: #f3f6fd;
+}
+
+tr:hover {
+    background: #e0e7ff;
+    transition: background 0.2s;
+}
+
+td img {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border: 2px solid #2563eb;
+}
+
+/* Botones de acción */
+button, .btn-editar, .btn-eliminar, .btn-cancelar {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    margin: 0 0.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover, .btn-editar:hover, .btn-eliminar:hover, .btn-cancelar:hover {
+    background: #1e40af;
+}
+
+.btn-eliminar {
+    background: #ef4444;
+}
+.btn-eliminar:hover {
+    background: #b91c1c;
+}
+
+.btn-cancelar {
+    background: #f59e42;
+}
+.btn-cancelar:hover {
+    background: #b45309;
+}
+#volverInicio {
+    display: block;
+    position: relative;
+    left: 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+#volverInicio:hover {
+    text-decoration: underline;
+    color: #1e40af;
+}
+@media (max-width: 900px) {
+    .opciones {
+        flex-direction: column;
+        align-items: center;
+    }
+}

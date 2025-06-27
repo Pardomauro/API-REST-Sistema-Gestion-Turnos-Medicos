@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Turnos - Clínica Salud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Turnos</h1>
+    </header>
+    <main>
+         <a href="gestionDeTurnos.html">Volver al inicio</a>
+        <section>
+            <h2>Solicitar Nuevo Turno</h2>
+            <form id="formTurno">
+                <input type="date" name="Fecha_Hora" id="fechaTurno" required>
+                <select id="especialidadSelect" required>
+                    <option value="">Seleccione especialidad</option>
+                    <option value="Clínica General">Clínica General</option>
+                    <option value="Gastroenterología">Gastroenterología</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Oncología">Oncología</option>
+                </select>
+                <select id="profesionalSelect" name="Profesional_Asignado" required>
+                    <option value="">Seleccione profesional</option>
+                </select>
+                <select id="horarioSelect" name="Horario" required>
+                    <option value="">Seleccione horario</option>
+                </select>
+                <input type="text" name="Paciente_Asignado" placeholder="DNI del Paciente" required>
+                <select name="Estado_De_Turno" required>
+                    <option value="pendiente">Pendiente</option>
+                    <option value="confirmado">Confirmado</option>
+                    <option value="cancelado">Cancelado</option>
+                    <option value="finalizado">Finalizado</option>
+                </select>
+                <input type="text" name="Observaciones" placeholder="Observaciones (opcional)">
+                <button type="submit">Solicitar Turno</button>
+            </form>
+        </section>
+        <section>
+            <h2>Buscar Turnos por DNI de Paciente</h2>
+            <form id="formBuscarTurnos">
+                <input type="text" id="dniPacienteBuscar" placeholder="DNI del Paciente" required>
+                <button type="submit">Buscar</button>
+            </form>
+
+            <div id="turnosPaciente">
+                <!-- Aquí se mostrarán los turnos del paciente -->
+            </div>
+            
+        </section>
+        <section>
+            <h2>Listado de Todos los Turnos</h2>
+            <table id="tablaTurnos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Fecha y Hora</th>
+                        <th>Especialidad</th>
+                        <th>Paciente (DNI)</th>
+                        <th>Estado</th>
+                        <th>Observaciones</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se cargarán los turnos con JS -->
+                </tbody>
+            </table>
+        </section>
+        <div id="horariosDisponibles"></div>
+    </main>
+    <script src="js/turnos.js"></script>
+</body>
+</html>

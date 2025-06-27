@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Pacientes - Clínica Salud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pacientes</h1>
+
+    </header>
+
+
+
+    <main>
+        <a href="gestionDeTurnos.html">Volver al inicio</a>
+
+        <section>
+            <h2>Registrar nuevo paciente</h2>
+            <form id="formPaciente">
+                <input type="text" name="DNI" placeholder="DNI" required>
+                <input type="text" name="Nombre_Completo" placeholder="Nombre completo" required>
+                <input type="date" name="Fecha_Nacimiento" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <input type="text" name="Historial_Basico" placeholder="Historial básico (opcional)">
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Buscar Turnos por DNI</h2>
+            <form id="formBuscarPaciente">
+                <input type="text" id="dniBuscar" placeholder="Ingrese su DNI" required>
+                <button type="submit">Buscar</button>
+            </form>
+
+            <div id="turnosPaciente">
+                <!-- Aquí se mostrarán los turnos del paciente -->
+            </div>
+
+        </section>
+
+
+        <section>
+            <h2>Listado de Pacientes</h2>
+            <table id="tablaPacientes">
+                <thead>
+                    <tr>
+                        <th>DNI</th>
+                        <th>Nombre Completo</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Email</th>
+                        <th>Historial Básico</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Aquí se mostrarán los pacientes registrados -->
+                </tbody>
+
+
+            </table>
+        </section>
+
+
+    </main>
+    <script src="js/pacientes.js"></script>
+</body>
+
+</html>

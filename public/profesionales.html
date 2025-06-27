@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Profesionales - Clínica Salud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Profesionales Médicos</h1>
+    </header>
+    <main>
+         <a href="gestionDeTurnos.html">Volver al inicio</a>
+        <section>
+            <h2>Agregar Profesional</h2>
+            <form id="formProfesional" enctype="multipart/form-data">
+                <input type="text" name="DNI" placeholder="DNI" required>
+                <input type="text" name="Nombre_Completo" placeholder="Nombre completo" required>
+                <select name="Especializacion" required>
+                    <option value="">Seleccione especialidad</option>
+                    <option value="Clínica General">Clínica General</option>
+                    <option value="Gastroenterología">Gastroenterología</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Oncología">Oncología</option>
+                </select>
+                <input type="text" name="Matricula" placeholder="Matrícula" required>
+                <input type="text" name="Horarios_Disponibles" placeholder="Horarios disponibles" required>
+                <input type="file" name="Foto_De_Perfil" accept="image/*" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+        <section>
+            <h2>Listado de Profesionales</h2>
+            <table id="tablaProfesionales">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nombre Completo</th>
+                        <th>Especialidad</th>
+                        <th>Matrícula</th>
+                        <th>Horarios</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se cargarán los profesionales con JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <div id="turnosProfesional"></div>
+        
+    </main>
+    <script src="js/profesionales.js"></script>
+</body>
+</html>
